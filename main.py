@@ -1,4 +1,3 @@
-# ▉
 from rich import print
 from random import choice
 from math import sqrt

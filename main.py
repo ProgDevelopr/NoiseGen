@@ -36,9 +36,10 @@ elements = [x.lower() for x in color.keys()]
 H = 9
 W = H
 
+def display(color):
+    pattern.append(color)
+
 def formula(X):
-    def display(color):
-        pattern.append(color)
     for i in range(1,(X**2)+1):
         if is_prime(i):
             display('p')
@@ -46,10 +47,8 @@ def formula(X):
             display('w')
 
 pattern = []
-if H > W:
-    formula(H)
-elif H < W:
-    formula(W)
+if H != W:
+    formula(max([H, W]))
 else:
     formula(H)
 
